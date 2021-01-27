@@ -53,6 +53,10 @@
             return $this->slug;
         }
 
+        public function set_slug($slug) {
+            $this->slug = $slug;
+        }
+
         public function is_ativo() {
             return $this->ativo;
         }

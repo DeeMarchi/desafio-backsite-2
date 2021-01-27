@@ -22,13 +22,21 @@
             <?php require "../includes/views/form-noticia.php"; ?>
 
                 <?php
-                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                        try {
                             TratarInput\tratar();
+                            $CRUD = new CRUD;
+    
+                            $tags = TratarInput\extrair_tags($_POST["tags"]);
+                            $noticia = new Noticia($_POST["titulo"],
+                                                    $_POST["descricao"],
+                                                    $_POST["conteudo"],
+                                                    $tags);
+                            $CRUD->criar_noticia($noticia);
+                        } catch (LogicException $err) {
+                            error_log($err->getMessage());
                         }
-                        $CRUD = new CRUD;
-
-                        $CRUD->ler_todas_noticias();
-
+                    }
                 ?>
             </main>
         </div>
