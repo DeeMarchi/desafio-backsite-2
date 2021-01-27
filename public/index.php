@@ -1,5 +1,8 @@
 <?php
     require "../includes/app/tratar-input.php";
+    require "../includes/models/noticia.php";
+    require "../includes/models/tag.php";
+    require "../includes/models/noticia_has_tag.php";
     require "../includes/app/connexao.php";
     require "../includes/app/crud.php";
 ?>
