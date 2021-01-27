@@ -12,5 +12,6 @@ Criar uma listagem para visualizar as últimas notícias.
 ##### Orientações e requisitos:
 - utilizar PHP 5.6 e MySQL
 - Não utilizar **nenhuma** framework PHP nem Javascript (CSS é permitido)
+- Não utulizar **nenhuma** estrutura de loop (while, do while, for, foreach, goto entre outras)
 - Utilizar versionamento GIT e publicar em um repositório público no github
 - Deve estar presente no repositório o arquivo .sql com a estrutura do banco de dados
